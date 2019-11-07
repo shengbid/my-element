@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
+    <p class="picture">
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
+      <img src="../assets/logo.png" alt="">
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
     <h3>Installed CLI Plugins</h3>
@@ -27,15 +28,29 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <!-- <pdf :src="src"></pdf> -->
   </div>
 </template>
 
 <script>
+  import pdf from 'vue-pdf'
 export default {
   name: 'HelloWorld',
+  components: {pdf},
   props: {
     msg: String
-  }
+  },
+  data() {
+    return {
+      src: ''
+    }
+  },
+  created() {
+    this.src = pdf.createLoadingTask('http://testtfpapi.g2l-service.com/financing/20190815/1565854610352.pdf')
+  },
+  mounted() {
+    
+  },
 }
 </script>
 
