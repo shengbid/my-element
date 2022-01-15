@@ -45,7 +45,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "ora": "^3.4.0",
     "semver": "^6.2.0",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "url-loader": "^2.0.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.35.3",
